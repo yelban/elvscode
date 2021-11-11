@@ -1,0 +1,21 @@
+{
+  // javascript 檔案存擋時格式化
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // json 檔案存擋時格式化
+  "[json]": {
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+  // "editor.codeActionsOnSave": {
+  //     "source.fixAll.eslint": true
+  // }
+}
