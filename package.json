@@ -5,10 +5,10 @@
   "scripts": {
     "lint": "eslint src/**/*.js",
     "p:dev": "parcel \"./src/public/index.html\" --open",
-    "p:build": "parcel build \"./src/public/index.html\"",
-    "dev-watch": "parcel watch \"./src/public/index.html\"",
-    "dev-server": "nodemon \"./src/app/index.js\"",
-    "dev": "concurrently \"npm:dev-server\" \"npm:dev-watch\" \"open-cli http://localhost:3000\""
+    "build": "parcel build \"./src/public/index.html\"",
+    "watch": "parcel watch \"./src/public/index.html\"",
+    "start": "nodemon \"./src/app/index.js\"",
+    "dev": "concurrently \"npm:watch\" \"npm:start\" \"sleep 1 && open-cli http://localhost:3000\""
   },
   "source": "./src/public/index.html",
   "repository": {
