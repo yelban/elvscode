@@ -4,8 +4,13 @@
   "description": "",
   "scripts": {
     "lint": "eslint src/**/*.js",
-    "dev": "parcel \"./src/public/index.html\" --open"
+    "p:dev": "parcel \"./src/public/index.html\" --open",
+    "p:build": "parcel build \"./src/public/index.html\"",
+    "dev-watch": "parcel watch \"./src/public/index.html\"",
+    "dev-server": "nodemon \"./src/app/index.js\"",
+    "dev": "concurrently \"npm:dev-server\" \"npm:dev-watch\" \"open-cli http://localhost:3000\""
   },
+  "source": "./src/public/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yelban/elvscode.git"
@@ -23,9 +28,15 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "concurrently": "^6.3.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
+    "open-cli": "^7.0.1",
     "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
   }
 }
