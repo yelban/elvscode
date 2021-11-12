@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "lint": "eslint src/**/*.js",
+    "lint:js": "eslint ./src/**/*.js",
+    "lint:css": "stylelint ./src/**/*.css",
     "p:dev": "parcel \"./src/public/index.html\" --open",
     "build": "parcel build \"./src/public/index.html\"",
     "watch": "parcel watch \"./src/public/index.html\"",
@@ -11,6 +12,9 @@
     "dev": "concurrently \"npm:watch\" \"npm:start\" \"sleep 1 && open-cli http://localhost:3000\""
   },
   "source": "./src/public/index.html",
+  "browserslist": [
+    "last 1 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yelban/elvscode.git"
@@ -26,14 +30,22 @@
   },
   "homepage": "https://github.com/yelban/elvscode#readme",
   "devDependencies": {
+    "@parcel/transformer-less": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "autoprefixer": "^10.4.0",
     "concurrently": "^6.3.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
     "open-cli": "^7.0.1",
-    "parcel": "^2.0.1"
+    "parcel": "^2.0.1",
+    "postcss-scss": "^4.0.2",
+    "stylelint": "^14.0.1",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-standard-scss": "^2.0.1"
   },
   "dependencies": {
     "express": "^4.17.1",

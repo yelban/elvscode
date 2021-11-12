@@ -1,0 +1,68 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $body-background-color;
+  color: $font-color;
+  font: 20px 'Helvetica Neue', helvetica, arial, 'Lucida Grande', 'LiHei Pro', 'WenQuanYi Zen Hei', 'Microsoft JhengHei', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'WenQuanYi Micro Hei', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .todolist-wrapper {
+    background-color: $todolist-body-background-color;
+    box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 75%);
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .new-todo {
+    border: none;
+    border-bottom: 1px solid $border-color;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    outline: none;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      align-items: center;
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      font-size: 20px;
+
+      .custom-checkbox {
+        border: 1px solid $checkbox-border-color;
+        border-radius: 5px;
+        height: 30px;
+        margin-left: 15px;
+        position: relative;
+        width: 30px;
+      }
+
+      label {
+        flex: 1;
+        margin: 0;
+        padding: 15px;
+        word-break: break-all;
+      }
+    }
+  }
+}

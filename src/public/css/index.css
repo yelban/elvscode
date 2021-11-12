@@ -1,4 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #D6D6D6;
+  color: #505050;
+  font: 20px 'Helvetica Neue', helvetica, arial, 'Lucida Grande', 'LiHei Pro', 'WenQuanYi Zen Hei', 'Microsoft JhengHei', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'WenQuanYi Micro Hei', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-    text-align: center;
-    /* color: coral; */
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.todolist-wrapper {
+  background-color: #EEE;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.new-todo {
+  border: none;
+  border-bottom: 1px solid #C0C0C0;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  outline: none;
+  padding: 16px;
+  width: 100%;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list li {
+  align-items: center;
+  border-bottom: 1px solid #C0C0C0;
+  display: flex;
+  font-size: 20px;
 }

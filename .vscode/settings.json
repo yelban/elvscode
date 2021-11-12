@@ -21,7 +21,29 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.associations": {
-    "123.json": "jsonc"
+    ".eslintrc.json": "jsonc"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "less", "scss"],
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint" // 覆寫預設檔案格式自動存擋
+  },
+  "[css]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint" // 覆寫預設檔案格式自動存擋
+  },
+  "[less]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint" // 覆寫預設檔案格式自動存擋
   }
   // "editor.codeActionsOnSave": {
   //     "source.fixAll.eslint": true
